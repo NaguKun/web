@@ -1,0 +1,117 @@
+<!-- HTML Structure -->
+<div class="container" style="width: 360px; height: 680px; background-color: #f8f9fa;">
+  <!-- Back Button & App Bar -->
+  <div style="position: relative;">
+      <button onclick="goToHome()" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 10px; z-index: 10;">
+          <i class="fa fa-arrow-left" style="font-size: 24px; color: #28A745;"></i>
+      </button>
+      
+      <div class="app-bar" style="background: linear-gradient(145deg, #FFFFFF, #F8F9FA); padding: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-radius: 0 0 20px 20px; margin-bottom: 20px;">
+          <div class="title-container">
+              <span class="title-text" style="font-size: 22px; background: linear-gradient(45deg, #28A745, #20c997); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">THỐNG KÊ THU GOM</span>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chart Content -->
+  <div class="chart-container" style="padding: 16px;">
+      <!-- Chart Item 1 -->
+      <div class="chart-item" style="background: white; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="chart-header" onclick="toggleChart('chart1', 'assets/column_chart.jpg')" style="padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span style="color: #28A745; font-weight: 600; font-size: 16px;">Biểu đồ khối lượng thu gom (Kg)</span>
+              <i class="fa fa-chevron-down" style="color: #28A745; transition: transform 0.3s;" id="icon1"></i>
+          </div>
+          <div id="chart1" style="display: none; padding: 16px; border-top: 1px solid #e9ecef;">
+              <canvas id="columnChart" width="300" height="200"></canvas>
+              <img src="assets/column_chart.jpg" alt="Column Chart" style="display: none; width: 100%; border-radius: 12px;" id="chartImg1">
+          </div>
+      </div>
+
+      <!-- Chart Item 2 -->
+      <div class="chart-item" style="background: white; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="chart-header" onclick="toggleChart('chart2', 'assets/pie_chart1.jpg')" style="padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span style="color: #28A745; font-weight: 600; font-size: 16px;">Tỉ lệ thu hồi chai nhựa (%)</span>
+              <i class="fa fa-chevron-down" style="color: #28A745; transition: transform 0.3s;" id="icon2"></i>
+          </div>
+          <div id="chart2" style="display: none; padding: 16px; border-top: 1px solid #e9ecef;">
+              <canvas id="pieChart1" width="300" height="200"></canvas>
+              <img src="assets/pie_chart1.jpg" alt="Pie Chart 1" style="display: none; width: 100%; border-radius: 12px;" id="chartImg2">
+          </div>
+      </div>
+
+      <!-- Chart Item 3 -->
+      <div class="chart-item" style="background: white; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="chart-header" onclick="toggleChart('chart3', 'assets/pie_chart2.jpg')" style="padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span style="color: #28A745; font-weight: 600; font-size: 16px;">Tỉ lệ thu hồi chai thủy tinh (%)</span>
+              <i class="fa fa-chevron-down" style="color: #28A745; transition: transform 0.3s;" id="icon3"></i>
+          </div>
+          <div id="chart3" style="display: none; padding: 16px; border-top: 1px solid #e9ecef;">
+              <canvas id="pieChart2" width="300" height="200"></canvas>
+              <img src="assets/pie_chart2.jpg" alt="Pie Chart 2" style="display: none; width: 100%; border-radius: 12px;" id="chartImg3">
+          </div>
+      </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-around; padding: 15px 20px; background: linear-gradient(145deg, #FFFFFF, #F8F9FA); box-shadow: 0 -2px 15px rgba(0,0,0,0.08); border-radius: 20px 20px 0 0; margin-top:210px">
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='home.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-home" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Trang chủ</p>
+  </div>
+  
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='rewards.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-gift" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Đổi quà</p>
+  </div>
+
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='scan.html'">
+    <div style="width: 65px; height: 65px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); margin-top: -25px; transition: all 0.3s;">
+      <i class="fa fa-qrcode" style="font-size: 30px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 14px; color: #28A745; font-weight: 600;">Quét mã</p>
+  </div>
+
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='notifications.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-bell" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Thông báo</p>
+  </div>
+
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='settings.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-cog" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Cài đặt</p>
+  </div>
+</div>
+</div>
+
+
+
+<style>
+.chart-item {
+    transition: transform 0.2s;
+}
+
+.chart-item:hover {
+    transform: translateY(-2px);
+}
+
+.chart-header:hover {
+    background-color: rgba(40, 167, 69, 0.05);
+    border-radius: 12px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.25);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+</style>

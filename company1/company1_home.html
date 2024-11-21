@@ -1,0 +1,232 @@
+<div class="container-fluid p-0" style="width: 360px; height: 680px; overflow-y: auto; background: white;">
+  <!-- Header -->
+  <div class="header d-flex justify-content-between align-items-center p-3">
+    <div class="brand">
+      <div class="brand-text">LOGTOWIN</div>
+      <div class="sub-brand">x Syngenta</div>
+    </div>
+    
+    <!-- Dropdown mũi tên chỉ xuống với Font Awesome -->
+    <div class="dropdown">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-chevron-down" style="color:white"></i>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#" onclick="logoutFunction()">Đăng xuất</a></li>
+      </ul>
+    </div>
+
+    <div class="logo-container ms-0"> <!-- Xóa margin trái để logo sát vào cạnh -->
+      <img src="assets/logo.jpg" alt="Logo" class="logo">
+    </div>
+  </div>
+  
+  
+  
+
+  <!-- Main Image -->
+  <div class="main-image-container px-3">
+    <img src="assets/banner.jpg" class="main-img" alt="Plant Image">
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-menu px-3 py-2">
+    <div class="nav-grid">
+      <div class="nav-item">
+        <div class="nav-icon-wrapper">
+          <i class="fa fa-home"></i>
+        </div>
+        <div class="nav-label">Trang chủ</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon-wrapper">
+          <i class="fa fa-bell"></i>
+        </div>
+        <div class="nav-label">Thông báo</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon-wrapper">
+          <i class="fa fa-qrcode"></i>
+        </div>
+        <div class="nav-label">Quét mã</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon-wrapper">
+          <i class="fa fa-history"></i>
+        </div>
+        <div class="nav-label">Lịch sử</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon-wrapper">
+          <i class="fa fa-cog"></i>
+        </div>
+        <div class="nav-label">Cài đặt</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Buttons -->
+  <div class="features-container px-3">
+    <button class="feature-btn store-info" onclick="goToStoreInfoPage1()">
+      <i class="fa fa-user"></i>
+      <span>Thông tin tài khoản</span>
+    </button>
+    <button class="feature-btn statistics" onclick="goToGarbagePage1()">
+      <i class="fa fa-bar-chart"></i>
+      <span>Thống kê thu gom</span>
+    </button>
+    <button class="feature-btn exchange" onclick="goToCar()">
+      <i class="fa fa-truck"></i>
+      <span>Thông tin đội xe</span>
+    </button>
+    <button class="feature-btn certificate" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-map"></i>
+      <span>Lộ trình thu gom</span>
+    </button>
+    
+    <!-- Dropdown Menu -->
+    <ul class="dropdown-menu">
+      <li><button class="dropdown-item" onclick="goToMap()">Vị trí các thùng chứa</button></li>
+      <li><button class="dropdown-item" onclick="goToMap1()">Vị trí các lưu chứa</button></li>
+      <li><button class="dropdown-item" onclick="goToMap2()">Lộ trình tối ưu hóa</button></li>
+    </ul>
+  </div>
+
+  <!-- Footer Image -->
+  <div class="footer-image px-3">
+    <img src="assets/grass.jpg" alt="Footer Image">
+  </div>
+
+</div>
+
+<style>
+:root {
+  --primary-green: #2E7D32;
+  --light-green: #4CAF50;
+  --lighter-green: #81C784;
+  --lightest-green: #C8E6C9;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header {
+  border-bottom: 1px solid #eee;
+}
+
+.brand-text {
+  color: var(--primary-green);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sub-brand {
+  color: var(--primary-green);
+  font-size: 0.8rem;
+}
+
+.logo-container {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.main-image-container {
+  margin-bottom: 10px;
+}
+
+.main-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  background: var(--lightest-green);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+}
+
+.nav-icon-wrapper i {
+  color: var(--primary-green);
+  font-size: 1.2rem;
+}
+
+.nav-label {
+  font-size: 0.7rem;
+  color: var(--primary-green);
+  text-align: center;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.feature-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.store-info {
+  background: var(--primary-green);
+}
+
+.statistics {
+  background: var(--light-green);
+}
+
+.exchange {
+  background: var(--primary-green);
+}
+
+.certificate {
+  background: var(--light-green);
+}
+
+.feature-btn i {
+  font-size: 1.2rem;
+}
+
+.footer-image img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+</style>

@@ -1,0 +1,176 @@
+<div class="container" style="width: 360px; height: 680px;">
+  <!-- Back Button & App Bar -->
+  <div style="position: relative;">
+      <button onclick="goToHome2()" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 10px; z-index: 10;">
+          <i class="fa fa-arrow-left" style="font-size: 24px; color: #28A745;"></i>
+      </button>
+      
+      <div class="app-bar" style="background: linear-gradient(145deg, #FFFFFF, #F8F9FA); padding: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-radius: 0 0 20px 20px; margin-bottom: 20px;">
+          <div class="title-container">
+              <span class="title-text" style="font-size: 22px; background: linear-gradient(45deg, #28A745, #20c997); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">LỘ TRÌNH THU GOM</span>
+          </div>
+      </div>
+  </div>
+
+  <!-- Section title -->
+  <div class="mb-4">
+      <div class="p-3 text-center" style="background: linear-gradient(145deg, #28A745, #20c997); border-radius: 12px; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.15);">
+          <h4 class="text-white m-0" style="font-size: 18px;">Vị trí các lưu chứa</h4>
+      </div>
+  </div>
+
+  <!-- Interactive Map -->
+  <div class="mb-4">
+    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <!-- Canvas for map visualization -->
+        <img src="assets/map.jpg" alt="Map" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
+    </div>
+</div>
+
+  <!-- Scrollable Container -->
+  <div class="scrollable-container" style="height: calc(100% - 520px); overflow-y: auto; padding: 0 15px; margin-bottom: 80px;">
+      <!-- Storage Location Cards -->
+      <div class="storage-card" style="background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="margin: 0; color: #28A745; font-size: 18px;">Kho lưu trữ trung gian 1</h3>
+          <div style="margin-top: 10px;">
+              <p style="margin: 5px 0; color: #666;">Vĩ độ: 10.469952</p>
+              <p style="margin: 5px 0; color: #666;">Kinh độ: 106.08598</p>
+          </div>
+      </div>
+
+      <div class="storage-card" style="background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="margin: 0; color: #28A745; font-size: 18px;">Kho lưu trữ trung gian 2</h3>
+          <div style="margin-top: 10px;">
+              <p style="margin: 5px 0; color: #666;">Vĩ độ: 10.376571</p>
+              <p style="margin: 5px 0; color: #666;">Kinh độ: 106.262443</p>
+          </div>
+      </div>
+
+      <div class="storage-card" style="background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="margin: 0; color: #28A745; font-size: 18px;">Kho lưu trữ trung gian 3</h3>
+          <div style="margin-top: 10px;">
+              <p style="margin: 5px 0; color: #666;">Vĩ độ: 10.367478</p>
+              <p style="margin: 5px 0; color: #666;">Kinh độ: 106.115092</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div style="position: fixed; bottom: 0; width: 360px; display: flex; justify-content: space-around; padding: 15px 20px; background: linear-gradient(145deg, #FFFFFF, #F8F9FA); box-shadow: 0 -2px 15px rgba(0,0,0,0.08); border-radius: 20px 20px 0 0;">
+    <div style="text-align: center; cursor: pointer;">
+      <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
+        <i class="fa fa-home" style="font-size: 22px; color: white;"></i>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Trang chủ</p>
+    </div>
+    
+    <div style="text-align: center; cursor: pointer;">
+      <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
+        <i class="fa fa-gift" style="font-size: 22px; color: white;"></i>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Đổi quà</p>
+    </div>
+  
+    <div style="text-align: center; cursor: pointer;">
+      <div style="width: 65px; height: 65px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); margin-top: -25px;">
+        <i class="fa fa-qrcode" style="font-size: 30px; color: white;"></i>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 14px; color: #28A745; font-weight: 600;">Quét mã</p>
+    </div>
+  
+    <div style="text-align: center; cursor: pointer;">
+      <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
+        <i class="fa fa-bell" style="font-size: 22px; color: white;"></i>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Thông báo</p>
+    </div>
+  
+    <div style="text-align: center; cursor: pointer;">
+      <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
+        <i class="fa fa-cog" style="font-size: 22px; color: white;"></i>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Cài đặt</p>
+    </div>
+  </div>
+</div>
+
+<script>
+window.onload = function() {
+  const canvas = document.getElementById('mapCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Set background
+  ctx.fillStyle = '#E8F5E9';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Draw some mock map elements
+  ctx.strokeStyle = '#81C784';
+  ctx.lineWidth = 2;
+  
+  // Draw roads
+  for(let i = 0; i < canvas.width; i += 40) {
+      ctx.beginPath();
+      ctx.moveTo(i, 0);
+      ctx.lineTo(i, canvas.height);
+      ctx.stroke();
+  }
+  
+  for(let i = 0; i < canvas.height; i += 40) {
+      ctx.beginPath();
+      ctx.moveTo(0, i);
+      ctx.lineTo(canvas.width, i);
+      ctx.stroke();
+  }
+
+  // Draw containers
+  const containers = [
+      {x: 100, y: 50, label: 'H'},
+      {x: 180, y: 100, label: 'L'},
+      {x: 250, y: 150, label: 'I'},
+      {x: 150, y: 100, label: 'YOU', current: true}
+  ];
+
+  containers.forEach(container => {
+      // Draw container point
+      ctx.beginPath();
+      ctx.arc(container.x, container.y, container.current ? 8 : 6, 0, Math.PI * 2);
+      ctx.fillStyle = container.current ? '#28A745' : '#66BB6A';
+      ctx.fill();
+      
+      // Draw label
+      ctx.fillStyle = '#1B5E20';
+      ctx.font = '12px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(container.label, container.x, container.y - 15);
+  });
+};
+</script>
+
+<style>
+.container {
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: #28A745;
+  border-radius: 4px;
+}
+
+.storage-card {
+  transition: transform 0.2s ease;
+}
+
+.storage-card:hover {
+  transform: translateX(5px);
+}
+</style>

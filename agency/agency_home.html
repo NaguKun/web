@@ -1,0 +1,99 @@
+<!-- User Profile -->
+<div style="display: flex; align-items: center; padding: 15px 20px; background: linear-gradient(145deg, #FFFFFF, #F8F9FA); border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 20px;">
+  <img src="assets/profile_image.jpg" alt="User" style="width: 55px; height: 55px; border-radius: 50%; margin-right: 15px; border: 3px solid #28A745;">
+  <div>
+    <p style="margin: 0; font-size: 13px; color: #6c757d; font-weight: 500;">Xin chào!</p>
+    <h1 style="margin: 0; font-size: 18px; color: #212529; font-weight: 600;">Nguyễn Văn A</h1>
+  </div>
+  <div class="dropdown" style ="margin-left: 12px;">
+    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#" onclick="logoutFunction()">Đăng xuất</a></li>
+    </ul>
+  </div>
+  <img src="assets/logo.jpg" alt="Logo" style="width: 45px; height: 45px; margin-left: auto; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+</div>
+
+<!-- Store Information -->
+<div style="background: linear-gradient(135deg, #28A745, #20c997); color: #FFFFFF; border-radius: 15px; padding: 20px; margin: 20px 15px; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
+  <h2 style="font-size: 18px; margin-bottom: 15px; font-weight: 600;">Thông tin về cửa hàng</h2>
+  <p style="margin: 0; font-size: 15px; padding: 5px 0; display: flex; align-items: center;">
+    <i class="fa fa-map-marker" style="margin-right: 10px; width: 20px;"></i>
+    Địa chỉ: Việt Nam Haha
+  </p>
+  <p style="margin: 8px 0; font-size: 15px; padding: 5px 0; display: flex; align-items: center;">
+    <i class="fa fa-phone" style="margin-right: 10px; width: 20px;"></i>
+    Số điện thoại: 086564801
+  </p>
+  <p style="margin: 0; font-size: 15px; padding: 5px 0; display: flex; align-items: center;">
+    <i class="fa fa-cube" style="margin-right: 10px; width: 20px;"></i>
+    Mã thùng chứa: FL-404
+  </p>
+</div>
+
+<!-- Feature Buttons -->
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px;">
+  <button style="background: linear-gradient(145deg, #28A745, #20c997); color: #FFFFFF; border: none; padding: 20px; border-radius: 15px; text-align: center; font-size: 14px; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.15);" onclick="goToCollectionInfoPage()">
+    <i class="fa fa-file-text" style="font-size: 28px; display: block; margin-bottom: 8px;"></i>
+    Thông tin thu gom
+  </button>
+  <button style="background: linear-gradient(145deg, #28A745, #20c997); color: #FFFFFF; border: none; padding: 20px; border-radius: 15px; text-align: center; font-size: 14px; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.15);" onclick="goToConatinerInfoPage()">
+    <i class="fa fa-trash" style="font-size: 28px; display: block; margin-bottom: 8px;"></i>
+    Thông tin thùng chứa
+  </button>
+  <button style="background: linear-gradient(145deg, #28A745, #20c997); color: #FFFFFF; border: none; padding: 20px; border-radius: 15px; text-align: center; font-size: 14px; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.15);" onclick="goToChartPage()">
+    <i class="fa fa-bar-chart" style="font-size: 28px; display: block; margin-bottom: 8px;"></i>
+    Thống kê thu gom
+  </button>
+  <button style="background: linear-gradient(145deg, #28A745, #20c997); color: #FFFFFF; border: none; padding: 20px; border-radius: 15px; text-align: center; font-size: 14px; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.15);" onclick="goToMapPage()">
+    <i class="fa fa-map-marker" style="font-size: 28px; display: block; margin-bottom: 8px;"></i>
+    Bản đồ thùng chứa
+  </button>
+</div>
+
+<div style="display: flex; justify-content: space-around; padding: 15px 20px; background: linear-gradient(145deg, #FFFFFF, #F8F9FA); box-shadow: 0 -2px 15px rgba(0,0,0,0.08); border-radius: 20px 20px 0 0;">
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='home.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-home" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Trang chủ</p>
+  </div>
+  
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='rewards.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-gift" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Đổi quà</p>
+  </div>
+
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='scan.html'">
+    <div style="width: 65px; height: 65px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); margin-top: -25px; transition: all 0.3s;">
+      <i class="fa fa-qrcode" style="font-size: 30px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 14px; color: #28A745; font-weight: 600;">Quét mã</p>
+  </div>
+
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='notifications.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-bell" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Thông báo</p>
+  </div>
+
+  <div style="text-align: center; cursor: pointer;" onclick="location.href='settings.html'">
+    <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+      <i class="fa fa-cog" style="font-size: 22px; color: white;"></i>
+    </div>
+    <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Cài đặt</p>
+  </div>
+</div>
+<style>
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.2);
+}
+button:active {
+  transform: translateY(1px);
+}
+</style>

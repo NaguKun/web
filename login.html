@@ -1,0 +1,31 @@
+<div class="text-center">
+    <img src="assets/logo.jpg" alt="Logo" class="mb-4" style="width: 100px; height: 100px;">
+    <h1 class="text-success">Chào mừng đến với RePes</h1>
+  </div>
+  <form class="w-100 mt-4" style="max-width: 400px;">
+    <div class="mb-3">
+      <label for="username" class="form-label text-success">Tên người dùng</label>
+      <input type="text" class="form-control" id="username" placeholder="Nhập tên người dùng">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label text-success">Mật khẩu</label>
+      <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+    </div>
+    <div class="mb-3">
+      <label for="user-type" class="form-label text-success">Đăng nhập với vai trò</label>
+      <select id="user-type" class="form-select">
+        <option value="agency">Đại lý-cửa hàng</option>
+        <option value="company">Công ty sản xuất</option>
+        <option value="company1">Công ty xử lý</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-success w-100 rounded-pill mt-3" onclick="handleLogin()">Đăng nhập</button>
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <a href="forgot_password.html" class="text-decoration-none text-success">Quên mật khẩu?</a>
+      <a href="create_account.html" class="text-decoration-none text-success">Tạo tài khoản</a>
+    </div>
+  </form>
+  <div class="mt-auto text-center text-muted">
+    <p>www.repeslogtowin.com</p>
+  </div>
+</div>

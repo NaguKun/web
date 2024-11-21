@@ -1,0 +1,303 @@
+<div style="position: relative;">
+  <button onclick="goToHome1()" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 10px; z-index: 10;">
+      <i class="fa fa-arrow-left" style="font-size: 24px; color: #28A745;"></i>
+  </button>
+  
+  <div class="app-bar" style="background: linear-gradient(145deg, #FFFFFF, #F8F9FA); padding: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-radius: 0 0 20px 20px; margin-bottom: 5px;">
+      <div class="title-container">
+          <span class="title-text" style="font-size: 22px; background: linear-gradient(45deg, #28A745, #20c997); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">THỐNG KÊ THU GOM</span>
+      </div>
+  </div>
+</div>
+
+
+    
+    <div class="header">
+        <div class="search-box">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+    </div>
+
+    <div class="store-info">
+        <div class="store-details">
+            <h5>Cửa hàng 1</h5>
+            <div class="info-line">
+                <span class="label">Họ và tên:</span>
+                <span class="value"></span>
+            </div>
+            <div class="info-line">
+                <span class="label">Số điện thoại:</span>
+                <span class="value"></span>
+            </div>
+            <div class="info-line">
+                <span class="label">Mã thùng chứa:</span>
+                <span class="value"></span>
+            </div>
+        </div>
+        <div class="store-image">
+            <img src="assets/store_image.jpg" alt="Store">
+        </div>
+    </div>
+
+    <div class="month-selector">
+        <select id="monthSelect" class="month-dropdown" onchange="showGarbageImages()">
+            <option value="">Chọn tháng</option>
+            <option value="1">Tháng 1</option>
+            <option value="2">Tháng 2</option>
+            <option value="3">Tháng 3</option>
+            <option value="4">Tháng 4</option>
+            <option value="5">Tháng 5</option>
+            <option value="6">Tháng 6</option>
+            <option value="7">Tháng 7</option>
+            <option value="8">Tháng 8</option>
+            <option value="9">Tháng 9</option>
+            <option value="10">Tháng 10</option>
+            <option value="11">Tháng 11</option>
+            <option value="12">Tháng 12</option>
+        </select>
+        <div class="collection-text">
+            Số lượng rác thải thu gom
+        </div>
+    </div>
+
+    <div class="garbage-container" id="garbageContainer">
+        <div class="garbage-images">
+            <div class="image-item">
+                <img src="assets/garbage_1.jpg" alt="Garbage Collection 1">
+                <div class="image-label">Tuần 1</div>
+            </div>
+            <div class="image-item">
+                <img src="assets/garbage_2.jpg" alt="Garbage Collection 2">
+                <div class="image-label">Tuần 2</div>
+            </div>
+            <div class="image-item">
+                <img src="assets/garbage_3.jpg" alt="Garbage Collection 3">
+                <div class="image-label">Tuần 3</div>
+            </div>
+            <div class="image-item">
+                <img src="assets/garbage_4.jpg" alt="Garbage Collection 4">
+                <div class="image-label">Tuần 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around; padding: 15px 20px; background: linear-gradient(145deg, #FFFFFF, #F8F9FA); box-shadow: 0 -2px 15px rgba(0,0,0,0.08); border-radius: 20px 20px 0 0; margin-top: 130px;">
+        <div style="text-align: center; cursor: pointer;" onclick="location.href='home.html'">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+            <i class="fa fa-home" style="font-size: 22px; color: white;"></i>
+          </div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Trang chủ</p>
+        </div>
+        
+        <div style="text-align: center; cursor: pointer;" onclick="location.href='rewards.html'">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+            <i class="fa fa-gift" style="font-size: 22px; color: white;"></i>
+          </div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Đổi quà</p>
+        </div>
+      
+        <div style="text-align: center; cursor: pointer;" onclick="location.href='scan.html'">
+          <div style="width: 65px; height: 65px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); margin-top: -25px; transition: all 0.3s;">
+            <i class="fa fa-qrcode" style="font-size: 30px; color: white;"></i>
+          </div>
+          <p style="margin: 8px 0 0; font-size: 14px; color: #28A745; font-weight: 600;">Quét mã</p>
+        </div>
+      
+        <div style="text-align: center; cursor: pointer;" onclick="location.href='notifications.html'">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+            <i class="fa fa-bell" style="font-size: 22px; color: white;"></i>
+          </div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Thông báo</p>
+        </div>
+      
+        <div style="text-align: center; cursor: pointer;" onclick="location.href='settings.html'">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, #28A745, #20c997); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); transition: all 0.3s;">
+            <i class="fa fa-cog" style="font-size: 22px; color: white;"></i>
+          </div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #28A745; font-weight: 600;">Cài đặt</p>
+        </div>
+      </div>
+<style>
+:root {
+    --primary-green: #28A745;
+    --secondary-green: #2E7D32;
+    --light-green: #E8F5E9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: white;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.header {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    position: relative;
+    margin-top: 10px;
+    max-width: 300px; /* Thanh tìm kiếm nhỏ hơn */
+    width: 150px; /* Để nó tự thu nhỏ */
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: 2px solid var(--primary-green);
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-green);
+}
+
+.store-info {
+    background: var(--primary-green);
+    color: white;
+    padding: 10px;
+    margin: 5px 15px 0 15px;
+    border-radius: 15px;
+    display: flex; /* Kích hoạt Flexbox */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa ảnh và nội dung */
+}
+
+.store-details h3 {
+    margin-bottom: 15px;
+}
+
+.info-line {
+    margin: 8px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.store-image {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.store-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.month-dropdown {
+    padding: 8px 15px;
+    border: 2px solid var(--primary-green);
+    border-radius: 20px;
+    background: white;
+    color: var(--primary-green);
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.collection-text {
+    color: var(--primary-green);
+    font-weight: 500;
+}
+
+.garbage-container {
+    height: calc(100vh - 400px);
+    margin: 15px;
+    overflow-y: auto;
+    border: 2px solid var(--light-green);
+    border-radius: 10px;
+    display: none;
+}
+
+.garbage-images {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-item {
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.image-label {
+    padding: 10px;
+    text-align: center;
+    color: var(--primary-green);
+    font-weight: 500;
+}
+
+/* Custom scrollbar */
+.garbage-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.garbage-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.garbage-container::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 4px;
+}
+
+.garbage-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-green);
+}
+.navbar {
+  position: absolute; /* Định vị tương đối với container */
+  bottom: 0; /* Dính sát đáy container */
+  width: 100%; /* Đảm bảo navbar phủ toàn bộ chiều ngang */
+}
+</style>
+
+
+
