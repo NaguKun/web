@@ -90,6 +90,11 @@ function enterCollectedWeight() {
 document.getElementById("monthSelect").addEventListener("change", checkSelection);
 document.getElementById("statisticSelect").addEventListener("change", checkSelection);
 
+function updateRecycledWeight(value) {
+  const recycledWeightElement = document.getElementById('recycledWeight');
+  recycledWeightElement.textContent = value || '0';
+}
+
 function checkSelection() {
   const month = document.getElementById("monthSelect").value;
   const statistic = document.getElementById("statisticSelect").value;

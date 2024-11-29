@@ -21,7 +21,20 @@
         <p style="margin: 8px 0; color: #1b5e20; font-size: 15px;"><i class="fa fa-user" style="width: 20px; color: #1b5e20;"></i> Họ và tên: Nguyễn Văn A</p>
         <p style="margin: 8px 0; color: #1b5e20; font-size: 15px;"><i class="fa fa-phone" style="width: 20px; color: #1b5e20;"></i> Số điện thoại: 086564801</p>
         <p style="margin: 8px 0; color: #1b5e20; font-size: 15px;"><i class="fa fa-map-marker" style="width: 20px; color: #1b5e20;"></i> Địa chỉ: Việt Nam</p>
-        <p style="margin: 8px 0; color: #1b5e20; font-size: 15px;"><i class="fa fa-balance-scale" style="width: 20px; color: #1b5e20;"></i> Lượng bao bì đã đổi quà: 100kg</p>
+        <p style="margin: 8px 0; color: #1b5e20; font-size: 15px;">
+          <i class="fa fa-balance-scale" style="width: 20px; color: #1b5e20;"></i> 
+          Lượng bao bì đã đổi quà: 
+          <span id="recycledWeight" style="font-weight: 600;">100</span>kg
+        </p>
+        <div style="margin-top: 10px;">
+          <label for="recycledInput" style="color: #1b5e20; font-size: 15px;">Nhập lượng bao bì:</label>
+          <input 
+            id="recycledInput" 
+            type="number" 
+            style="width: 100px; padding: 5px; margin-left: 10px; border: 1px solid #1b5e20; border-radius: 8px;" 
+            oninput="updateRecycledWeight(this.value)"
+          >
+        </div>
       </div>
       <div class="farmer-image">
         <img src="assets/store_image.jpg" alt="Store Image" style="width: 110px; height: 110px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
